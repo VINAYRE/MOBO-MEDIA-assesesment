@@ -13,7 +13,7 @@ class Carts1 extends Component {
     axios.get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
         this.setState({
-          data: (response.data.data)
+          data:response.data
 
 
         });
@@ -28,6 +28,7 @@ class Carts1 extends Component {
   render() {
     return (
       <>
+      
         <h1>Featured businesses near you</h1>
         <div className="container mt-100">
 
@@ -42,7 +43,7 @@ class Carts1 extends Component {
                   <img id="cart__img" src="https://ibooking.co.uk/custom_assets/image/ibooking-hero-image.jpg" width="52%" height="175px" />
                 </div>
                 <div className="card-body baby">
-                  <h6>Modern, Well-Appointed Room</h6>
+                  <h6>{}</h6>
                   <h6>⭐⭐⭐⭐⭐</h6>
                   <p>36b Talbot green, Liantrisant,Wales,CF72 8AF</p>
                 </div>
@@ -142,6 +143,7 @@ class Carts1 extends Component {
 </div>
 </div>
         </div>
+        
       </>
     )
   }
